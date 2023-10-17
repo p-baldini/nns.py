@@ -2,3 +2,4 @@
 
 # FOLDERS
 **/__pycache__
+**/nns.py.egg-info
