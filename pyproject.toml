@@ -1,0 +1,23 @@
+[project]
+name 		= 'nns.py'
+version 	= '0.0.1'
+authors		= [
+    { name = 'Paolo Baldini', email    = 'paolo.baldini.phd@gmail.com' }
+]
+description	= 'Python wrapper of the NNs.C library'
+classifiers	= [
+    'Development Status :: 2 - Pre-Alpha',
+    'Intended Audience :: Science/Research',
+    'Programming Language :: Python :: 3.9',
+    'Topic :: Scientific/Engineering :: Physics',
+    'Topic :: Software Development :: Libraries'
+]
+
+[project.urls]
+"GitHub"	= 'https://github.com/Mandrab/nns.py'
+
+[build-system]
+requires	= [
+    'setuptools'
+]
+build-backend 	= "setuptools.build_meta"
