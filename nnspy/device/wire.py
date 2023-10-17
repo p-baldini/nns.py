@@ -1,5 +1,5 @@
 from ctypes import c_double, Structure
-from sources.util.point import position
+from nnspy.util.point import position
 
 class wire(Structure):
     _fields_ = [

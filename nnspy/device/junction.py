@@ -1,5 +1,5 @@
 from ctypes import c_int, Structure
-from sources.util.point import position
+from nnspy.util.point import position
 
 class junction(Structure):
     _fields_ = [

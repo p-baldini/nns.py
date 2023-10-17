@@ -1,8 +1,8 @@
 from ctypes import c_double, c_int, CDLL, POINTER
-from sources.device.component import connected_component
-from sources.device.datasheet import datasheet
-from sources.device.network import network_state, network_topology
-from sources.interface.interface import interface
+from nnspy.device.component import connected_component
+from nnspy.device.datasheet import datasheet
+from nnspy.device.network import network_state, network_topology
+from nnspy.interface.interface import interface
 
 nns = CDLL("libnns.so")
 

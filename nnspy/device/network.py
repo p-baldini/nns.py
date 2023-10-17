@@ -1,6 +1,6 @@
 from ctypes import c_double, c_int, POINTER, Structure
-from sources.device.junction import junction
-from sources.device.wire import wire
+from nnspy.device.junction import junction
+from nnspy.device.wire import wire
 
 class network_topology(Structure):
     _fields_ = [
