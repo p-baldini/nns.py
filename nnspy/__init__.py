@@ -21,6 +21,9 @@ nns.split_components.restype = POINTER(connected_component)
 nns.voltage_stimulation.argtypes = network_state, connected_component, interface, POINTER(c_double)
 nns.voltage_stimulation.restype = c_int
 
+nns.resistive_distance.argtypes = datasheet, network_state, connected_component, c_int, c_int
+nns.resistive_distance.restype = c_double
+
 __all__ = [
 
     # CLASSES
