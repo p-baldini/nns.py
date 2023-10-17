@@ -1,5 +1,5 @@
 [project]
-name 		= 'nns.py'
+name 		= 'nnspy'
 version 	= '0.0.1'
 authors		= [
     { name = 'Paolo Baldini', email    = 'paolo.baldini.phd@gmail.com' }
