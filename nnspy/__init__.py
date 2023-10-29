@@ -5,7 +5,7 @@ from nnspy.device.junction import junction
 from nnspy.device.network import network_state, network_topology
 from nnspy.device.wire import wire
 from nnspy.interface.interface import interface
-from nnspy.interface.MEA import MEA
+from nnspy.interface.mea import MEA
 from nnspy.util.point import point
 
 nns = CDLL("libnns.so")
@@ -36,7 +36,7 @@ __all__ = [
 
     "datasheet", "network_topology", "network_state", "connected_component",
 
-    "interface", "MEA"
+    "interface", "MEA",
 
     # WRAPPER
 
