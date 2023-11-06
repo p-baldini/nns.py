@@ -9,5 +9,5 @@ nns = CDLL("libnns.so")
 nns.voltage_stimulation.argtypes = network_state, connected_component, interface, POINTER(c_double)
 nns.voltage_stimulation.restype = c_int
 
-nns.voltage_stimulation.argtypes = network_state, connected_component, MEA, POINTER(c_double)
-nns.voltage_stimulation.restype = c_int
+nns.voltage_stimulation_mea.argtypes = network_state, connected_component, MEA, POINTER(c_double)
+nns.voltage_stimulation_mea.restype = c_int
