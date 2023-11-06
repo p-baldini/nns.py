@@ -1,4 +1,4 @@
-from ctypes import c_double, c_int, CDLL
+from ctypes import c_double, c_int, CDLL, POINTER
 from nnspy.device.network import network_state
 from nnspy.device.component import connected_component
 from nnspy.interface.interface import interface
