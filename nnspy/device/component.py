@@ -1,4 +1,6 @@
-from ctypes import c_int, POINTER, Structure
+from ctypes import c_int, c_void_p, CDLL, POINTER, Structure
+
+nns = CDLL("libnns.so")
 
 class connected_component(Structure):
     _fields_ = [
@@ -8,3 +10,6 @@ class connected_component(Structure):
         ("js_skip",     c_int),
         ("Is",          POINTER(c_int))
     ]
+
+nns.cccmp.argtypes = c_void_p, c_void_p
+nns.cccmp.restype = c_int
