@@ -4,3 +4,5 @@
 **/__pycache__
 **/build
 **/nnspy.egg-info
+.vscode
+venv
