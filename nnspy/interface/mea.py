@@ -1,5 +1,10 @@
-from ctypes import c_double, c_int, Structure
+from ctypes import c_double, c_int, CDLL, Structure
+from nnspy.device.datasheet import datasheet
+from nnspy.device.network import network_topology
+from nnspy.interface.interface import interface
 from nnspy.util.point import point
+
+nns = CDLL("libnns.so")
 
 class MEA(Structure):
     _fields_ = [
@@ -8,3 +13,9 @@ class MEA(Structure):
         ("ct",      c_int * 16),
         ("ws",      c_double * 16)
     ]
+
+nns.connect_MEA.argtypes = datasheet, network_topology
+nns.connect_MEA.restype = MEA
+
+nns.mea2interface.argtypes = MEA,
+nns.mea2interface.restype = interface
