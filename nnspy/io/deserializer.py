@@ -9,6 +9,6 @@ nns.deserialize_network.argtypes = POINTER(datasheet), POINTER(network_topology)
 
 nns.deserialize_state.argtypes = datasheet, network_topology, POINTER(network_state), POINTER(c_char), c_int, c_int
 
-nns.deserialize_component.argtypes = POINTER(connected_component), POINTER(c_char), c_int, c_int, c_int
+nns.deserialize_component.argtypes = POINTER(connected_component), POINTER(c_char), c_int, c_int
 
 nns.deserialize_interface.argtypes = POINTER(interface), POINTER(c_char), c_int, c_int
