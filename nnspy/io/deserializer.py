@@ -2,6 +2,8 @@ from ctypes import c_char, c_int, CDLL, POINTER
 from nnspy.device.component import connected_component
 from nnspy.device.datasheet import datasheet
 from nnspy.device.network import network_topology, network_state
+from nnspy.interface.interface import interface
+from nnspy.interface.mea import MEA
 
 nns = CDLL("libnns.so")
 
@@ -12,3 +14,5 @@ nns.deserialize_state.argtypes = datasheet, network_topology, POINTER(network_st
 nns.deserialize_component.argtypes = POINTER(connected_component), POINTER(c_char), c_int, c_int
 
 nns.deserialize_interface.argtypes = POINTER(interface), POINTER(c_char), c_int, c_int
+
+nns.deserialize_mea.argtypes = POINTER(MEA), POINTER(c_char), c_int, c_int
