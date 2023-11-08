@@ -1,6 +1,5 @@
-from ctypes import c_double, c_int, CDLL, POINTER, Structure
-
-nns = CDLL("libnns.so")
+from ctypes import c_double, c_int, POINTER, Structure
+from nnspy.nns import nns
 
 class interface(Structure):
     _fields_ = [
@@ -17,3 +16,5 @@ nns.copy.argtypes = interface,
 nns.copy.restype = interface
 
 nns.destroy_interface.argtypes = interface,
+
+__all__ = "interface", "nns"
