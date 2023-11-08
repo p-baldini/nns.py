@@ -8,3 +8,5 @@ class wire(Structure):
         ("end_edge",    point),
         ("length",      c_double)
     ]
+
+__all__ = "wire",

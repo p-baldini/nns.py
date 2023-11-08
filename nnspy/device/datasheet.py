@@ -8,3 +8,5 @@ class datasheet(Structure):
         ("package_size",    c_int),
         ("generation_seed", c_int)
     ]
+
+__all__ = "datasheet",

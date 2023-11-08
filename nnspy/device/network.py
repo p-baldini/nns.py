@@ -1,9 +1,8 @@
-from ctypes import c_double, c_int, CDLL, POINTER, Structure
+from ctypes import c_double, c_int, POINTER, Structure
 from nnspy.device.datasheet import datasheet
 from nnspy.device.junction import junction
 from nnspy.device.wire import wire
-
-nns = CDLL("libnns.so")
+from nnspy.nns import nns
 
 class network_topology(Structure):
     _fields_ = [
@@ -27,3 +26,5 @@ nns.construe_circuit.restype = network_state
 nns.destroy_topology.argtypes = network_topology,
 
 nns.destroy_state.argtypes = network_state,
+
+__all__ = "network_state", "network_topology", "nns",
