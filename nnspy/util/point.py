@@ -1,6 +1,5 @@
-from ctypes import c_double, CDLL, Structure
-
-nns = CDLL("libnns.so")
+from ctypes import c_double, Structure
+from nnspy.nns import nns
 
 class point(Structure):
     _fields_ = [
@@ -10,3 +9,5 @@ class point(Structure):
 
 nns.squared_distance.argtypes = point, point
 nns.squared_distance.restype = c_double
+
+__all__ = "point", "nns"
