@@ -1,4 +1,4 @@
-from ctypes import c_double, c_int, POINTER, Structure
+from ctypes import c_double, c_int, c_void_p, POINTER, Structure
 from nnspy.nns import nns
 
 class interface(Structure):
@@ -12,8 +12,11 @@ class interface(Structure):
         ("loads_weight",    POINTER(c_double)),
     ]
 
-nns.copy.argtypes = interface,
-nns.copy.restype = interface
+nns.itcmp.argtypes = c_void_p, c_void_p
+nns.itcmp.restype = c_int
+
+nns.copy_interface.argtypes = interface,
+nns.copy_interface.restype = interface
 
 nns.destroy_interface.argtypes = interface,
 
