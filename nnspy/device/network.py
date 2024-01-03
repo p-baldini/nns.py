@@ -1,4 +1,4 @@
-from ctypes import c_double, c_int, POINTER, Structure
+from ctypes import c_double, c_int, c_void_p, POINTER, Structure
 from nnspy.device.datasheet import datasheet
 from nnspy.device.junction import junction
 from nnspy.device.wire import wire
@@ -22,6 +22,15 @@ nns.create_network.restype = network_topology
 
 nns.construe_circuit.argtypes = datasheet, network_topology
 nns.construe_circuit.restype = network_state
+
+nns.ntcmp.argtypes = c_void_p, c_void_p
+nns.ntcmp.restype = c_int
+
+nns.copy_topology.argtypes = datasheet, network_topology
+nns.copy_topology.restype = network_topology
+
+nns.copy_state.argtypes = datasheet, network_topology, network_state
+nns.copy_state.restype = network_state
 
 nns.destroy_topology.argtypes = network_topology,
 
