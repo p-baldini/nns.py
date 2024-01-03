@@ -3,8 +3,8 @@ from nnspy import *
 
 ds = datasheet()
 ds.wires_count      = 2000
-ds.length_mean      = 14.0
-ds.length_std_dev   = 40.0
+ds.length_mean      = 40.0
+ds.length_std_dev   = 14.0
 ds.package_size     = 500
 ds.generation_seed  = 1234
 
