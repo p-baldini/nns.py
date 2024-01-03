@@ -4,6 +4,7 @@ from nnspy.device.datasheet import *
 from nnspy.device.junction import *
 from nnspy.device.network import *
 from nnspy.device.wire import *
+from nnspy.interface.connection import *
 from nnspy.interface.interface import *
 from nnspy.interface.mea import *
 from nnspy.io.deserializer import *
@@ -22,7 +23,7 @@ __all__ = [
 
     "datasheet", "network_topology", "network_state", "connected_component",
 
-    "interface", "MEA",
+    "NONE", "SOURCE", "GROUND", "LOAD", "interface", "MEA",
 
     # WRAPPER
 
