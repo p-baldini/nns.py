@@ -1,4 +1,5 @@
-from ctypes import c_double, Structure
+from ctypes import c_double, c_int, c_void_p, Structure
+from nnspy.nns import nns
 from nnspy.util.point import point
 
 class wire(Structure):
@@ -9,4 +10,7 @@ class wire(Structure):
         ("length",      c_double)
     ]
 
-__all__ = "wire",
+nns.wcmp.argtypes = c_void_p, c_void_p
+nns.wcmp.restype = c_int
+
+__all__ = "wire", "nns"
