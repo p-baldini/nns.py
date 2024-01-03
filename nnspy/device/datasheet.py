@@ -1,4 +1,5 @@
 from ctypes import c_double, c_int, Structure
+from nnspy.nns import nns
 
 class datasheet(Structure):
     _fields_ = [
@@ -9,4 +10,7 @@ class datasheet(Structure):
         ("generation_seed", c_int)
     ]
 
-__all__ = "datasheet",
+nns.dscmp.argtypes = c_void_p, c_void_p
+nns.dscmp.restype = c_int
+
+__all__ = "datasheet", "nns"
