@@ -1,4 +1,4 @@
-from ctypes import c_double, c_int, Structure
+from ctypes import c_double, c_int, c_void_p, Structure
 from nnspy.nns import nns
 
 class datasheet(Structure):
