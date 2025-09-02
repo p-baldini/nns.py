@@ -1,12 +1,12 @@
 [project]
 name 		= 'nnspy'
-version 	= '0.0.1'
+version 	= '0.1.0'
 authors		= [
     { name = 'Paolo Baldini', email    = 'paolo.baldini.phd@gmail.com' }
 ]
 description	= 'Python wrapper of the NNs.C library'
 classifiers	= [
-    'Development Status :: 2 - Pre-Alpha',
+    'Development Status :: 3 - Alpha',
     'Intended Audience :: Science/Research',
     'Programming Language :: Python :: 3.9',
     'Topic :: Scientific/Engineering :: Physics',
@@ -14,7 +14,7 @@ classifiers	= [
 ]
 
 [project.urls]
-"GitHub"	= 'https://github.com/Mandrab/nns.py'
+"GitHub"	= 'https://github.com/p-baldini/nns.py'
 
 [build-system]
 requires	= [
