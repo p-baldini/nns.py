@@ -12,7 +12,7 @@ nns.serialize_state.argtypes = datasheet, network_topology, network_state, c_cha
 
 nns.serialize_component.argtypes = connected_component, c_char_p, c_int, c_int
 
-nns.serialize_interface.argtypes = interface, c_char_p, c_int
+nns.serialize_interface.argtypes = interface, c_char_p, c_int, c_int
 
 nns.serialize_mea.argtypes = MEA, c_char_p, c_int, c_int
 
